@@ -181,32 +181,32 @@ public class Calendario extends javax.swing.JFrame {
     private void jbAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAceptarActionPerformed
         Calendar fechaElegida = dcFechaReserva.getCalendar();
         if(isAgregar){
-            fechaElegida.set(Calendar.HOUR, 0);
-            fechaElegida.set(Calendar.MINUTE, 0);
-            fechaElegida.set(Calendar.SECOND, 0);
-            fechaElegida.set(Calendar.MILLISECOND, 0);
             //SI HAY FECHA INGRESADA.
             if(dcFechaReserva.getDate() == null){
                 JOptionPane.showMessageDialog(this, "Ingresar una fecha.");
             }
             else{
-            //SE ENVIA LA FECHA ELEGIDA AL PANEL DE LOS HORARIOS.
-            HorariosDisponibles pruebaHorarios = new HorariosDisponibles();
-            pruebaHorarios.setFechaElegida(fechaElegida);
-            this.setVisible(false);
-            pruebaHorarios.setVisible(true); 
+                fechaElegida.set(Calendar.HOUR, 0);
+                fechaElegida.set(Calendar.MINUTE, 0);
+                fechaElegida.set(Calendar.SECOND, 0);
+                fechaElegida.set(Calendar.MILLISECOND, 0);
+                //SE ENVIA LA FECHA ELEGIDA AL PANEL DE LOS HORARIOS.
+                HorariosDisponibles pruebaHorarios = new HorariosDisponibles();
+                pruebaHorarios.setFechaElegida(fechaElegida);
+                this.setVisible(false);
+                pruebaHorarios.setVisible(true); 
             }
         }
         else if(isModificar){
-            fechaElegida.set(Calendar.HOUR, 0);
-            fechaElegida.set(Calendar.MINUTE, 0);
-            fechaElegida.set(Calendar.SECOND, 0);
-            fechaElegida.set(Calendar.MILLISECOND, 0);
             //SI HAY FECHA INGRESADA.
             if(dcFechaReserva.getDate() == null){
                 JOptionPane.showMessageDialog(this, "Ingresar una fecha.");
             }
             else{
+                fechaElegida.set(Calendar.HOUR, 0);
+                fechaElegida.set(Calendar.MINUTE, 0);
+                fechaElegida.set(Calendar.SECOND, 0);
+                fechaElegida.set(Calendar.MILLISECOND, 0);
                 //SE ENVIA LA FECHA ELEGIDA AL PANEL DE LOS HORARIOS.
                 HorariosDisponibles horarios = new HorariosDisponibles();
                 horarios.setFechaElegida(fechaElegida);
